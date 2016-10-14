@@ -9,6 +9,22 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+var one = {
+    title : 'Article-One',
+    heading : 'ARTICLE-ONE',
+    content : ` <div>
+            <p> hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.
+            </p>
+        
+            <p> hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.
+            </p>
+       
+            <p> hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.
+            </p> `
+    
+};
+
+
 app.get('/article-one',function(req,res){
  res.sendFile(path.join(__dirname,'ui','article-one.html'));   
 });
