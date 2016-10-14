@@ -24,7 +24,40 @@ var one = {
     
 };
 
+function createtemp(data)
+{
+ title=data.title;
+ heading=data.heading;
+ content=data.content;
 
+var htmltemp = `
+   <!DOCTYPE html>
+    <head>
+        <title>
+            ${title}
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+         <link href="/ui/style.css" rel="stylesheet" />
+        
+    </head>
+    <body>
+         <div class="cont">
+             
+        <div>
+            <a href="/">HOME</a> 
+        </div>
+         
+        <div>
+            ${heading}
+        </div>    
+        
+        <div>
+            ${content}
+        </div>    
+        </div>
+    </body>    
+    </html>`
+}
 app.get('/article-one',function(req,res){
  res.sendFile(path.join(__dirname,'ui','article-one.html'));   
 });
