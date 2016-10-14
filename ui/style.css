@@ -20,3 +20,14 @@ body {
     height: 200px;
 }
 
+  .cont{
+                max-width:800px;
+                font-family:sans-serif;
+                margin: 0 auto;
+                background:white;
+                color:grey;
+                padding-top:20px;
+                padding-left:20px;
+                padding-right:20px;
+                
+            }
