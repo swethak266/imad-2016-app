@@ -10,5 +10,8 @@ console.log('Loaded!');
  
  setInterval(function(){ 
      var img = document.getElementById('madi');
-     img.style.marginLeft = '10px';
+     var cnt = document.getElementById('madi').getAttribute("cnt");
+     cnt = Number(cnt)+10;
+     img.style.marginLeft = cnt+'px';
+     document.getElementById('madi').setAttribute("cnt", cnt);
  }, 1000);
