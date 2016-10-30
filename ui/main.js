@@ -13,5 +13,6 @@ console.log('Loaded!');
      var cnt = document.getElementById('madi').getAttribute("cnt");
      cnt = Number(cnt)+10;
      img.style.marginLeft = cnt+'px';
+     alert(window.scroll);
      document.getElementById('madi').setAttribute("cnt", cnt);
  }, 100);
