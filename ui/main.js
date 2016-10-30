@@ -7,3 +7,8 @@ console.log('Loaded!');
  img.onclick = function() {
      img.style.marginLeft = '100px';
  };
+ 
+ setInterval(funtion(){
+     var img = document.getElementById('madi');
+    img.style.marginLeft = '100px';
+ }, 100)
