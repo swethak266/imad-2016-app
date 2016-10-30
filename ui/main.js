@@ -10,5 +10,5 @@ console.log('Loaded!');
  
  setInterval(function(){ 
      var img = document.getElementById('madi');
-     img.style.marginLeft = '100px';
+     img.style.marginLeft = '10px';
  }, 1000);
