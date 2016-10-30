@@ -8,7 +8,7 @@ console.log('Loaded!');
      img.style.marginLeft = '100px';
  };
  
- setInterval(funtion(){
+ setInterval(function(){ 
      var img = document.getElementById('madi');
-    img.style.marginLeft = '100px';
+     img.style.marginLeft = '100px';
  }, 1000);
