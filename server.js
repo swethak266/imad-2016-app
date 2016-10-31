@@ -9,65 +9,11 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-var one = {
-    title : 'Article-One',
-    heading : 'ARTICLE-ONE',
-    content : ` <div>
-            <p> hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.
-            </p>
-        
-            <p> hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.
-            </p>
-       
-            <p> hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.hello.this is html and css.
-            </p> `
-    
-};
 
-function createtemp(data)
-{
- title=data.title;
- heading=data.heading;
- content=data.content;
-
-var htmltemp = `
-   <!DOCTYPE html>
-    <head>
-        <title>
-            ${title}
-        </title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-         <link href="/ui/style.css" rel="stylesheet" />
-        
-    </head>
-    <body>
-         <div class="cont">
-             
-        <div>
-            <a href="/">HOME</a> 
-        </div>
-         
-        <div>
-            ${heading}
-        </div>    
-        
-        <div>
-            ${content}
-        </div>    
-        </div>
-    </body>    
-    </html>`
-    
-    return htmltemp;
-}
-app.get('/article-one',function(req,res){
+app.get('/inspirational.html',function(req,res){
  res.send(createtemp(one));   
 });
 
-
-app.get('/two',function(req,res){
-    res.sendFile(path.join(__dirname,'ui','two.html'));
-});
 
 app.get('/ui/main.js',function(req,res){
     res.sendFile(path.join(__dirname,'ui','main.js'));
