@@ -10,6 +10,7 @@ body {
     background-color:lightgrey;
     font-size:400%;
         color:red;
+    background-image:url("/ui/blue.jpg");
 } 
 
 .buton{
