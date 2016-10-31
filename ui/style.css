@@ -14,7 +14,7 @@ body {
 .buton{
     padding: 50px;
     font-size: 30px;
-    cursor:hand;
+    cursor: "hand";
 }
 
 
