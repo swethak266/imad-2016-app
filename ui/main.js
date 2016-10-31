@@ -8,10 +8,3 @@ console.log('Loaded!');
      img.style.marginLeft = '100px';
  };
  
- setInterval(function(){ 
-     var img = document.getElementById('madi');
-     var cnt = document.getElementById('madi').getAttribute("cnt");
-     cnt = Number(cnt)+10;
-     img.style.marginLeft = cnt+'px';
-    document.getElementById('madi').setAttribute("cnt", cnt);
- }, 100);
