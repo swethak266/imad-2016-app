@@ -4,8 +4,7 @@ body {
     background-color:lightblue;
     background-image:url("/ui/bckgrnd.jpg");
     background-repeat:no-repeat;
-    background-size:100px;
-}
+    }
 
 .div1{
     font-style:italic;
