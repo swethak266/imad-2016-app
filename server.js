@@ -10,8 +10,10 @@ app.get('/', function (req, res) {
 });
 
 
-app.get('/ui/inspirational.html',function(req,res){
- res.send(createtemp(one));   
+
+
+app.get('/ui/inspirational.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'inspirational.html'));
 });
 
 
