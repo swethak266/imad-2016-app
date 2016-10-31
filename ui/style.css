@@ -8,12 +8,20 @@ body {
     font-style:italic;
     background-color:lightgrey;
     font-size:400%;
-    color:red;
+        color:red;
 } 
+
+.buton{
+    padding: 50px;
+}
+
+
+
 
 .center {
     text-align: center;
 }
+
 
 .text-big {
     font-size: 300%;
