@@ -2,6 +2,7 @@ body {
     font-family: sans-serif;
     margin-top: 0px;
     background-color:lightblue;
+    background-image:url("/ui/img1.png");
 }
 
 .div1{
