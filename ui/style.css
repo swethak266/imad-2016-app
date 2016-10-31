@@ -30,6 +30,11 @@ body {
     font-size:30px;
 }
 
+.contain{
+    max-width:800px;
+    margin: 0 auto;
+}
+
 
 
 .center {
