@@ -21,6 +21,10 @@ app.get('/life', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui','Life.html'));
 });
 
+app.get('/friendship', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui','Friendship.html'));
+});
+
 app.get('/ui/main.js',function(req,res){
     res.sendFile(path.join(__dirname,'ui','main.js'));
 });
