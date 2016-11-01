@@ -45,6 +45,10 @@ app.get('/ui/ImgInsp.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'ImgInsp.jpg'));
 });
 
+app.get('/ui/ImgInspBck.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'ImgInspBck.jpg'));
+});
+
 
 app.get('/ui/bckgrnd.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'bckgrnd.jpg'));
