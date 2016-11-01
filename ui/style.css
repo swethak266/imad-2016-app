@@ -20,6 +20,7 @@ body {
     font-size: 30px;
     cursor: "hand";
     font-style:italic;
+    border:groove;
 }
 
 .div2{
