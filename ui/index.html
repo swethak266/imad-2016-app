@@ -50,6 +50,12 @@
                 request.send(null);
             }
 		
+    		function loadLoggedInUser (username) 
+    		{
+                var loginArea = document.getElementById('login_area');
+                loginArea.innerHTML = '<h3> Hi <i>${username}</i></h3><a href="/logout">Logout</a>';
+            }
+		
 			function loadLoginForm ()
 			{
 				var loginHtml = '<h3>Login/Register to unlock awesome features</h3>';
