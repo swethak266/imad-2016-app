@@ -12,6 +12,7 @@
         
         <div id="login_area">
                 <center>Loading login status...</center>
+                
            </div>
             <hr/>
         
@@ -28,6 +29,45 @@
         <input type="button" class="buton" style="background-image:url(/ui/successimg.jpg); color:white"  value="   Success   ">
         </div>
         
+        <script>
+        function loadLoginForm ()
+        {
+         var loginHtml = `
+        <h3>Login/Register to unlock awesome features</h3>
+        <input type="text" id="username" placeholder="username" />
+        <input type="password" id="password" />
+        <br/><br/>
+        <input type="submit" id="login_btn" value="Login" />
+        <input type="submit" id="register_btn" value="Register" />
+        `;
+        
+    document.getElementById('login_area').innerHTML = loginHtml;
+    
+        var register = document.getElementById('register_btn');
+    register.onclick = function () {
+        // Create a request object
+        var request = new XMLHttpRequest();
+        
+        // Capture the response and store it in a variable
+        request.onreadystatechange = function () {
+          if (request.readyState === XMLHttpRequest.DONE) {
+              // Take some action
+              if (request.status === 200) {
+                  alert('User created successfully');
+                  register.value = 'Registered!';
+              } else {
+                  alert('Could not register the user');
+                  register.value = 'Register';
+              }
+          }
+        };
+        }
+        
+        
+        
+        </script>
+        
         
     </body>
+    
 </html>
