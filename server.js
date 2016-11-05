@@ -1,7 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-var pool= require('pg').pool;
+var Pool = require('pg').Pool ;
 var crypto=require('crypto');
 var bodyParser = require('body-parser');
 var session = require('express-session');
@@ -18,7 +18,7 @@ var config={
     password: process.env.DB_PASSWORD
 };
 
-var pool = new pool(config);
+var pool = new Pool(config);
 
 function hash (input, salt) {
     // How do we create a hash?
