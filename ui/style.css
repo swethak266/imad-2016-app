@@ -40,6 +40,23 @@ body {
     max-width:650px;
     margin: 0 auto; 
    }
+   
+.comment {
+    margin-left: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.commenter {
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+#comment_form {
+    margin-left: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
 
 
 
@@ -59,6 +76,8 @@ body {
 .img-medium {
     height: 200px;
 }
+
+
 
   .cont{
                 max-width:800px;
