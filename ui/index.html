@@ -43,7 +43,7 @@
         
     document.getElementById('login_area').innerHTML = loginHtml;
     
-        var register = document.getElementById('register_btn');
+       var register = document.getElementById('register_btn');
     register.onclick = function () {
         // Create a request object
         var request = new XMLHttpRequest();
@@ -61,6 +61,27 @@
               }
           }
         };
+        
+        // Make the request
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+        console.log(username);
+        console.log(password);
+        request.open('POST', '/create-user', true);
+        request.setRequestHeader('Content-Type', 'application/json');
+        request.send(JSON.stringify({username: username, password: password}));  
+        register.value = 'Registering...';
+    
+    };
+}
+
+function loadLoggedInUser (username) {
+    var loginArea = document.getElementById('login_area');
+    loginArea.innerHTML = `
+        <h3> Hi <i>${username}</i></h3>
+        <a href="/logout">Logout</a>
+    `;
+}
         }
         
         
