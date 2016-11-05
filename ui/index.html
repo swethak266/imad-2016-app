@@ -1,9 +1,9 @@
 <!doctype html>
 <html>
      <head>
-        <link href="/ui/style.css" rel="stylesheet">
+        <link href="https://cloud.imad.hasura.io/code/files/ui%2Fstyle.css" rel="stylesheet">
      </head>
-	 <body style="background-image:url('/ui/mainimg.jpg')" onload='loadLoginForm();'>
+	 <body style="background-image:url('https://cloud.imad.hasura.io/code/files/ui/mainimg.jpg')" onload='loadLoginForm()'>
         
         <div class="div1" >
             QUOTES4U
@@ -14,19 +14,25 @@
         <hr/>
         
         <div class="div2" align="center">
-        <a href="/inspirational">inspirational</a><br>
-        <a href="/Funny">Funny</a><br>
-        <a href="/Life">Life</a><br>
-        <a href="/Success">Success</a><br>
-        <a href="/Friendship">Friendship</a><br><br><br>
-        <input type="button" class="buton" style="background-image:url(/ui/ImgInsp.jpg); color:blue "  value="Inspirational">
-        <input type="button" class="buton" style="background-image:url(/ui/lifeimg.jpg); color:white"     value="      Life       "><br><br><br>
-        <input type="button" class="buton" style="background-image:url(/ui/friendimg.jpg);"                 value="  Friendship ">
-        <input type="button" class="buton" style="background-image:url(/ui/funnyimg.jpg); color:white"    value="     Funny     "><br><br><br>
-        <input type="button" class="buton" style="background-image:url(/ui/successimg.jpg); color:white"  value="   Success   ">
+			<!--<a href="/inspirational">inspirational</a><br>
+			<a href="/Funny">Funny</a><br>
+			<a href="/Life">Life</a><br>
+			<a href="/Success">Success</a><br>
+			<a href="/Friendship">Friendship</a><br><br><br>
+			-->
+			<input type="button" class="buton" onclick='openWindow(\''inspirational'\');' style="background-image:url(/ui/ImgInsp.jpg); color:blue" value="Inspirational">
+			<input type="button" class="buton" onclick='openWindow(\''Life'\');' style="background-image:url(/ui/lifeimg.jpg); color:white" value="Life"><br><br><br>
+			<input type="button" class="buton" onclick='openWindow(\''Friendship'\');' style="background-image:url(/ui/friendimg.jpg);" value="  Friendship ">
+			<input type="button" class="buton" onclick='openWindow(\''Funny'\');' style="background-image:url(/ui/funnyimg.jpg); color:white"    value="Funny"><br><br><br>
+			<input type="button" class="buton" onclick='openWindow(\''Success'\');' style="background-image:url(/ui/successimg.jpg); color:white"  value="Success">
         </div>
         
         <script type='text/javascript'>
+			function openWindow(ref) {
+			    var url = "http://swethak266.imad.hasura-app.io/"+ref;
+				window.open(url);
+			}
+		
 			function loadLoginForm ()
 			{
 				var loginHtml = '<h3>Login/Register to unlock awesome features</h3>';
