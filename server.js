@@ -18,7 +18,7 @@ var config={
     password: 'db-swethak266-13509'
 };
 
-var pool = new Pool(config);
+var pool = new pool(config);
 
 function hash (input, salt) {
     // How do we create a hash?
