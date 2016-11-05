@@ -18,6 +18,8 @@ var config={
     password: db-swethak266-13509
 };
 
+var pool = new Pool(config);
+
 function hash (input, salt) {
     // How do we create a hash?
     var hashed = crypto.pbkdf2Sync(input, salt, 10000, 512, 'sha512');
