@@ -6,6 +6,10 @@ var crypto=require('crypto');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 
+
+var app = express();
+app.use(morgan('combined'));
+
 var config={
     user: 'swethak266',
     database: 'swethak266',
@@ -42,10 +46,6 @@ app.post('/create-user', function (req, res) {
    });
 });
 
-
-
-var app = express();
-app.use(morgan('combined'));
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
