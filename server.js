@@ -13,9 +13,9 @@ app.use(morgan('combined'));
 var config={
     user: 'swethak266',
     database: 'swethak266',
-    host: 'db.imad.hasura-app.io',
-    port: '8080',
-    password: process.env.DB_PASSWORD
+    host: 'localhost',
+    port: '5432',
+    password: db-swethak266-13509
 };
 
 function hash (input, salt) {
