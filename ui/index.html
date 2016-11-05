@@ -28,8 +28,20 @@
         
         <script type='text/javascript'>
 			function openWindow(ref) {
-			    var url = "http://swethak266.imad.hasura-app.io/"+ref;
-				window.open(url);
+			   var request = new XMLHttpRequest();
+                request.onreadystatechange = function () {
+                    if (request.readyState === XMLHttpRequest.DONE) {
+                        if (request.status === 200) {
+                            var url = "http://swethak266.imad.hasura-app.io/"+ref;
+							window.open(url);
+                        } else {
+                            alert("Please Login to View this Page");
+                        }
+                    }
+                };
+                
+                request.open('GET', '/check-login', false);
+                request.send(null);
 			}
 			
 			function loadLogin () 
