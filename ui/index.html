@@ -158,6 +158,7 @@
                         var articles = document.getElementById('articles');
                         if (request.status === 200) {
                             var content = '<ul>';
+                            console.log(this.responseText);
                             var articleData = JSON.parse(this.responseText);
                             for (var i=0; i< articleData.length; i++) {
                                 content += '<li>';
