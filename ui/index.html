@@ -163,7 +163,7 @@
                             for (var i=0; i< articleData.length; i++) {
                                 content += '<li>';
                                 content += '<a href="/articles/"'+articleData[i].title+'">'+articleData[i].heading+'</a>';
-                                content += articleData[i].date+'</li>'; //.split("T")[0]
+                                content += articleData[i].date.split("T")[0]+'</li>';
                             }
                             content += "</ul>";
                             articles.innerHTML = content;
