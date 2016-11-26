@@ -88,7 +88,36 @@ function createTemplate (data) {
             return $div.innerHTML;
         }
 
-        
+        function loadComments () {
+                // Check if the user is already logged in
+            var request = new XMLHttpRequest();
+            request.onreadystatechange = function () {
+                if (request.readyState === XMLHttpRequest.DONE) {
+                    var comments = document.getElementById('comments');
+                    if (request.status === 200) {
+                        var content = '';
+                        var commentsData = JSON.parse(this.responseText);
+                        for (var i=0; i< commentsData.length; i++) {
+                            var time = new Date(commentsData[i].timestamp);
+                            content += '<div class="comment">';
+                            content += '    <p>'+escapeHTML(commentsData[i].comment)+'</p>';
+                            content += '    <div class="commenter">';
+                            content += '        '+commentsData[i].username+' - '+time.toLocaleTimeString()+' on '+time.toLocaleDateString();
+                            content += '    </div>';
+                            content += '</div>';
+                        }
+                        comments.innerHTML = content;
+                    } else {
+                        comments.innerHTML('Oops! Could not load comments!');
+                    }
+                }
+            };
+
+            request.open('GET', '/get-comments/' + currentArticleTitle, true);
+            request.send(null);
+        }
+
+
         // The first thing to do is to check if the user is logged in!.
         loadLogin();
         loadComments();
